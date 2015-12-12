@@ -3,6 +3,6 @@ A basic search engine created in Python and some other files for basic Python le
 
 Steps to build a search engine:
 
-1. Find `data`
-2. Build an `index`
-3. `Rank` pages
+1. Find **data**
+2. Build an **index**
+3. **Rank** pages
