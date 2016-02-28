@@ -41,3 +41,12 @@ def add_to_index( index, keyword, url ):
             lst[ 1 ].append( url )
             return
     index.append( [ keyword, [ url ] ] )
+
+def lookup( index, keyword ):
+    results = []
+    for item in index:
+        if item[ 0 ] == keyword:
+            for url in item[ 1 ]:
+                results.append( url )
+            break
+    return results
