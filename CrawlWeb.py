@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 def get_next_target( page ):
     start_link = page.find( '<a href=' )
     if start_link == -1:
