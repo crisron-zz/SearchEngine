@@ -40,6 +40,7 @@ def add_to_index( index, keyword, url ):
         if lst[ 0 ] == keyword:
             lst[ 1 ].append( url )
             return
+    # Add a new entry
     index.append( [ keyword, [ url ] ] )
 
 def lookup( index, keyword ):
@@ -51,7 +52,5 @@ def lookup( index, keyword ):
 def add_page_to_index( index, url, content ):
     keywords = content.split()
     for keyword in keywords:
-        for item in index:
-            if item[ 0 ] == keyword:
-                item[ 1 ].append( url )
+        add_to_index( index, keyword, url )
     return index
