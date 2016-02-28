@@ -47,3 +47,11 @@ def lookup( index, keyword ):
         if item[ 0 ] == keyword:
             return item[ 1 ]
     return []
+
+def add_page_to_index( index, url, content ):
+    keywords = content.split()
+    for keyword in keywords:
+        for item in index:
+            if item[ 0 ] == keyword:
+                item[ 1 ].append( url )
+    return index
